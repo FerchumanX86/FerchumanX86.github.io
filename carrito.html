@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>COFFIHOUSE</title>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+	
+	<h1><img src="COFFIHOUSE.png" width="250" ></h1>
+	<div id="carrito">
+		<h2>Productos:</h2>
+		<ul>
+			<li>TE...............- $10.00 <button onclick="agregarProducto('Producto 1', 10)">Agregar al Carrito</button></li>
+			<li>CAFE..........- $20.00 <button onclick="agregarProducto('Producto 2', 20)">Agregar al Carrito</button></li>
+			<li>LICUADO....- $30.00 <button onclick="agregarProducto('Producto 3', 30)">Agregar al Carrito</button></li>
+		</ul>
+		<h2>Carrito de Compras:</h2>
+		<ul id="lista-carrito">
+		</ul>
+		<div id="total-carrito">Total: $<span id="total">0.00</span></div>
+		<button onclick="finalizarCompra()">Comprar Ahora</button>
+	</div>
+	<script src="carrito.js"></script>
+</body>
+</html>
