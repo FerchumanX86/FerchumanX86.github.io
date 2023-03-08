@@ -1,3 +1,11 @@
+.swal {
+    background-color:#333 ;
+}
+.dark {
+    background-color: grey;
+    color: rgb(204, 221, 94);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
