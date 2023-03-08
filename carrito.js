@@ -24,19 +24,25 @@ function agregarProducto(nombre, precio) {
   totalCarrito.innerText = total.toFixed(2);
 }
 
+
 function finalizarCompra() {
+    // Obtener el valor del elemento con el ID "total-carrito"
     var total = document.getElementById("total-carrito").innerText;
+  
+    // Obtener la fecha actual y formatearla como una cadena legible por humanos
     var fecha = new Date().toLocaleDateString();
+  
+    // Almacenar el valor del total y la fecha en el almacenamiento local del navegador
     localStorage.setItem("compra", "Total: " + total + " - Fecha: " + fecha);
+  
+    // Mostrar una alerta con el total y la fecha de compra
     alert("Gracias por su compra. Su pedido ha sido procesado.\n\n" + "Total: " + total + "\nFecha: " + fecha);
+
+        swal("Gracias por su compra. Su pedido ha sido procesado.\n\n" + "Total: " + total + "\nFecha: " + fecha);
+        //🤔 queria cambiar el alert por un swal pero no funciona, si alguno me puede dar una mano con eso 
+
+    // Recargar la página
     location.reload();
-}
-/*
-tiliza un array llamado carrito para almacenar los productos que el usuario agrega al carrito.
-La función agregarProducto se encarga de crear un objeto con los datos del producto (nombre y precio) y lo agrega al array del carrito.
-Luego, la función actualiza la lista de productos del carrito en el HTML y el total de la compra.
-El HTML incluye una lista de productos y botones que llaman a la función agregarProducto con los datos correspondientes.
-agregó un nuevo botón con el texto "Comprar Ahora", que al hacer clic en él, llamará a la función finalizarCompra().
-La función finalizarCompra() obtiene el valor total del carrito de compras y la fecha actual mediante el uso del objeto Date.
-Luego, guarda la compra realizada en la memoria del navegador utilizando el objeto localStorage
-*/
+  }
+
+
