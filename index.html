@@ -14,24 +14,56 @@
 		
 	</h1>
 	
-	<div id="carrito">
-		<h2>Productos:</h2>
-		<ul>
-			<li>TE...............- $10.00 <button onclick="agregarProducto('TE' , 10)">Agregar al Carrito</button></li>
-			<li>CAFE..........- $20.00 <button onclick="agregarProducto('CAFE ', 20)">Agregar al Carrito</button></li>
-			<li>LICUADO....- $30.00 <button onclick="agregarProducto('LICUADO ', 30)">Agregar al Carrito</button></li>
-		</ul>
-		<h2>Carrito de Compras:</h2>
-		<ul id="lista-carrito">
-		</ul>
-		<div id="total-carrito">Total: $<span id="total">0.00</span></div>
-		<br>
-		<button onclick="finalizarCompra()">Comprar Ahora</button>
-		<br>
-		<br>
-		<button onclick="location.reload()">Recargar página</button>
-		<br>
-		<br>
+
+
+
+	<div id="contenedor-principal">
+
+		<div id="carrito">
+			<h2>Productos:</h2>
+			<ul>
+				<li class="card mb-3 text-center">
+					<div class="card-body">
+					<h5 class="card-title">TE - $10.00</h5>
+					<div class="imagen-producto" id="imagen-te"></div>
+					<button onclick="agregarProducto('TE', 10)" class="btn btn-primary mt-2">Agregar al Carrito</button>
+					</div>
+				</li>
+				<li class="card mb-3 text-center">
+					<div class="card-body">
+					<h5 class="card-title">CAFE - $20.00</h5>
+					<div class="imagen-producto" id="imagen-cafe"></div>
+					<button onclick="agregarProducto('CAFE', 20)" class="btn btn-primary mt-2">Agregar al Carrito</button>
+					</div>
+				</li>
+				<li class="card mb-3 text-center">
+					<div class="card-body">
+					<h5 class="card-title">LICUADO - $30.00</h5>
+					<div class="imagen-producto" id="imagen-licuado"></div>
+					<button onclick="agregarProducto('LICUADO', 30)" class="btn btn-primary mt-2">Agregar al Carrito</button>
+					</div>
+				</li>
+				
+			
+				<div id="carrito">
+					<h2>Productos:</h2>
+					<ul>
+					<!-- Elementos li de los productos -->
+					</ul>
+					<h2>Carrito de Compras:</h2>
+					<ul id="lista-carrito"></ul>
+					<div id="total-carrito">Total: $<span id="total">0.00</span></div>
+					<div id="acciones-carrito">
+					<button onclick="finalizarCompra()">Comprar Ahora</button>
+					<button onclick="vaciarCarrito()">Vaciar Carrito</button>
+					<button onclick="mostrarCompras()">Mostrar Compras</button>
+					<button onclick="location.reload()">Recargar página</button>
+					</div>
+				</div>
+				
+		
+	</div>	
+			 
 
 		<button id="botonFondo">🌓</button>
 
